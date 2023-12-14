@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <span><input type="text" id="num1"></span>
+        <span><input type="text" id="num2"></span>
+    </div>
+    <br>
+    <div>
+        <span><button id="add" onclick="addf()">Addition (+)</button></span>
+        <span><button id="sub" onclick="subf()">Subtraction (-)</button></span>
+        <span><button id="mul" onclick="mulf()">Multiplication (x)</button></span>
+        <span><button id="div" onclick="divf()">Division (/)</button></span>
+    </div>
+
+    <p id="result"></p>
+</body>
+</html>
+
+<script>
+    function addf() {
+        let number1 = document.getElementById('num1').value
+        let number2 = document.getElementById('num2').value
+        let n1 = parseInt(number1)
+        let n2 = parseInt(number2)
+        let after_cal
+
+        after_cal = n1 + n2
+
+        document.getElementById('result').innerHTML = 'Result Addition: ' + after_cal
+    }
+
+    function subf() {
+        let number1 = document.getElementById('num1').value
+        let number2 = document.getElementById('num2').value
+        let n1 = parseInt(number1)
+        let n2 = parseInt(number2)
+        let after_cal
+
+        after_cal = n1 - n2
+
+        document.getElementById('result').innerHTML = 'Result Subtraction: ' + after_cal
+    }
+
+    function mulf() {
+        let number1 = document.getElementById('num1').value
+        let number2 = document.getElementById('num2').value
+        let n1 = parseInt(number1)
+        let n2 = parseInt(number2)
+        let after_cal
+
+        after_cal = n1 * n2
+
+        document.getElementById('result').innerHTML = 'Result Multiplication: ' + after_cal
+    }
+
+    function divf() {
+        let number1 = document.getElementById('num1').value
+        let number2 = document.getElementById('num2').value
+        let n1 = parseInt(number1)
+        let n2 = parseInt(number2)
+        let after_cal
+
+        after_cal = n1 / n2
+
+        document.getElementById('result').innerHTML = 'Result Division: ' + after_cal
+    }
+    
+</script>
