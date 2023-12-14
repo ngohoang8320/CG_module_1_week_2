@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+
+    <style>
+        form {
+            width: 600px;
+        }
+
+        .currency_title {
+            display: inline-block;
+            width: 20%;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .from_c {
+            display: inline-block;
+            width: 20%;
+            text-align: center;
+        }
+
+        .to_c {
+            display: inline-block;
+            width: 20%;
+            text-align: center;
+        }
+
+        .input_cur {
+            display: inline-block;
+            width: 20%;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <div>
+            <span class="currency_title">Amount</span>
+            <span class="currency_title">Form Currency</span>
+            <span class="currency_title">To Currency</span>
+        </div>
+
+        <div>
+            <span class="input_cur">
+                <input type="text" id="amount" style="width: 80px">
+            </span>
+            <span class="from_c">
+                <select name="form_c" id="from_c">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                    <option value="JPY">JPY</option>
+                </select>
+            </span>
+
+            <span class="to_c">
+                <select name="to_c" id="to_c">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                    <option value="JPY">JPY</option>
+                </select>
+            </span>
+
+            <span>
+                <button type="button" id="button_s" onclick="result()">Convert</button>
+            </span>
+        </div>
+        <p id="displayResult"></p>
+    </form>
+</body>
+</html>
+
+<script>
+    function result() {
+        let currency_amount = document.getElementById('amount').value
+        let currency = parseInt(currency_amount)
+        let from = document.getElementById('from_c').value
+        let to = document.getElementById('to_c').value
+        let result_c
+
+        if(from == 'VND' && to == 'USD') {
+            result_c = (currency / 24260).toFixed(2) + ' $'
+        }
+        else if(from == 'VND' && to == 'JPY') {
+            result_c = (currency / 171).toFixed(2) + ' ¥'
+        }
+        else if(from == 'USD' && to == 'VND') {
+            result_c = (currency * 24260) + ' VND'
+        }
+        else if(from == 'USD' && to == 'JPY') {
+            result_c = (currency * 142) + ' ¥'
+        }
+        else if(from == 'JPY' && to == 'VND') {
+            result_c = (currency * 171) + ' VND'
+        }
+        else if(from == 'JPY' && to == 'USD') {
+            result_c = (currency / 142).toFixed(2) + ' $'
+        }
+        else if(from == 'VND') {
+            result_c = currency + ' VND'
+        }
+        else if(from == 'USD') {
+            result_c = currency + ' $'
+        }
+        else {
+            result_c = currency + ' ¥'
+        }
+
+        document.getElementById('displayResult').innerHTML = 'The result is: ' + result_c
+    }
+</script>
