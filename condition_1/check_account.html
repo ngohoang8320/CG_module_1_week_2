@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+
+    <style>
+        .labels {
+            display: inline-block;
+            width: 80px;
+        }
+
+        .button {
+            display: block;
+            margin-top: 20px;
+            margin-left: 110px;
+        }
+    </style>
+</head>
+<body>
+    <span class="labels">Username: </span>
+    <input type="text" id="user_n">
+    <br><br>
+    <div id="check_more" style="visibility: hidden;">
+        <span class="labels">Password: </span>
+        <input type="text" id="pass_w">
+    </div>
+    
+
+    <div class="button" onclick="checkf()"><button>Sign in</button></div>
+
+    <br>
+    <p id="sign_in"></p>
+</body>
+</html>
+
+<script>
+    function checkf() {
+        let user = document.getElementById('user_n').value
+        let pass = document.getElementById('pass_w').value
+
+        if(user === 'Admin') {
+            document.getElementById('check_more').style = 'visibility: visible'
+            document.getElementById('sign_in').innerHTML = "Let's check password."
+            if(pass ==='TheMaster') {
+                document.getElementById('sign_in').innerHTML = "Wellcome."
+            }
+            else if(pass == '') {
+                document.getElementById('sign_in').innerHTML = "Canceled."
+            }
+            else {
+               document.getElementById('sign_in').innerHTML = "Wrong passsword." 
+            }
+        }
+        else if (user === '') {
+            document.getElementById('check_more').style = 'visibility: hidden'
+            document.getElementById('sign_in').innerHTML = "Canceled."
+        }
+        else {
+            document.getElementById('check_more').style = 'visibility: hidden'
+            document.getElementById('sign_in').innerHTML = "I don't know you."
+        }
+    }
+</script>
+
