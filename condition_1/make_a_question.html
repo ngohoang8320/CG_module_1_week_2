@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question</title>
+</head>
+<body>
+    <h2 id="question">What is the “official” name of JavaScript?</h2>
+        <span style="font-weight: bold;">Your answer:</span>
+        <input type="text" id="answer">
+        <span><button id="check" onclick="checkf()">Check</button></span>
+        <br><br>
+        <i id="right_ans"></i>
+</body>
+</html>
+
+<script>
+    function checkf() {
+        let ans = document.getElementById('answer').value
+        if(ans === 'ECMAScript') {
+            document.getElementById('right_ans').innerHTML = 'Right!'
+        }
+        else {
+            document.getElementById('right_ans').innerHTML = "Didn’t know? ECMAScript!"
+        }
+    }
+</script>
