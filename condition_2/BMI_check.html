@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .label {
+            display: inline-block;
+            width: 80px;
+            text-align: center;
+        }
+        .but {
+            display: inline-block;
+            width: 80px;
+            text-align: center;
+            margin-left: 20px ;
+        }
+    </style>
+</head>
+<body>
+    <h2>Input your height and weight</h2>
+    
+    <span class="label">Weight</span>
+    <span>
+        <input type="text" id="weight">
+    </span>
+
+    <span class="label">Height</span>
+    <Span>
+        <input type="text" id="height">
+    </Span>
+
+    <span class="but"><button style="width: 100%;" onclick="checkf()">Your BMI</button></span>
+
+    <p id="result"></p>
+</body>
+</html>
+
+<script>
+    function checkf() {
+        let w = parseFloat(document.getElementById('weight').value)
+        let h = parseFloat(document.getElementById('height').value)
+
+        let bmi = w / (h * h)
+
+        if (bmi < 18)
+            document.getElementById('result').innerHTML = "Underweight";
+        else if (bmi < 25.0)
+            document.getElementById('result').innerHTML = "Normal";
+        else if (bmi < 30.0)
+            document.getElementById('result').innerHTML = "Overweight";
+        else
+            document.getElementById('result').innerHTML = "Obese";
+
+        // document.getElementById('result').innerHTML = bmi.toFixed(2)
+    }
+</script>
