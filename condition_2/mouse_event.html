@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg" alt="Ảnh" id="myImage" style="width: 30%;">
+    <p>Click button below to move the image to right</p>
+    <button id="move_right" onclick="mover()">Move it!</button>
+</body>
+</html>
+
+<script>
+    let imgO = document.getElementById('myImage')
+
+    function init() {
+        imgO = document.getElementById('myImage')
+        imgO.style.position = 'relative'
+        imgO.style.left = '0px'
+    }
+
+    function mover() {
+        imgO.style.left = parseInt(imgO.style.left) +10 + 'px'
+    }
+
+    window.onload = init;
+
+</script>
