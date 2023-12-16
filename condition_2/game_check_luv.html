@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            text-align: center;
+            margin-top: 200px;
+        }
+
+        .but {
+            width: 40px;
+            height: 25px;
+            margin: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <h1>Do you love me!</h1>
+        <button type="button" id="yesBut" class="but" onclick="pressedYes()">Yes</button>
+        <button type="button" id="noBut" class="but" onmouseover="pointToNo()" style="position: absolute;">No</button>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    function pressedYes() {
+        alert('<3')
+    }
+
+    function pointToNo() {
+        let x = Math.round(Math.random() * (window.innerWidth - 50))
+        let y = Math.round(Math.random() * (window.innerHeight - 50))
+
+        document.getElementById('noBut').style.left = x + 'px'
+        document.getElementById('noBut').style.top = y + 'px'
+    }
+</script>
