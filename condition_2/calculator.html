@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=devnameidth, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .button_cal {
+            display: block;
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="calc" style="visibility: hidden;">
+    <table>
+        <tr>
+            <th colspan="4">
+                <input type="text" id="display">
+            </th>
+        </tr>
+
+        <tr>
+            <td><button type="button" class="button_cal" value="1" name="1" onclick="inputValue(this.name, this.value)">1</td>
+            <td><button type="button" class="button_cal" value="2" name="2" onclick="inputValue(this.name, this.value)">2</td>
+            <td><button type="button" class="button_cal" value="3" name="3" onclick="inputValue(this.name, this.value)">3</td>
+            <td><button type="button" class="button_cal" value="+" name="+" onclick="inputValue(this.name, this.value)">+</td>
+        </tr>
+
+        <tr>
+            <td><button type="button" class="button_cal" value="4" name="4" onclick="inputValue(this.name, this.value)">4</td>
+            <td><button type="button" class="button_cal" value="5" name="5" onclick="inputValue(this.name, this.value)">5</td>
+            <td><button type="button" class="button_cal" value="6" name="6" onclick="inputValue(this.name, this.value)">6</td>
+            <td><button type="button" class="button_cal" value="-" name="-" onclick="inputValue(this.name, this.value)">-</td>
+        </tr>
+
+        <tr>
+            <td><button type="button" class="button_cal" value="7" name="7" onclick="inputValue(this.name, this.value)">7</td>
+            <td><button type="button" class="button_cal" value="8" name="8" onclick="inputValue(this.name, this.value)">8</td>
+            <td><button type="button" class="button_cal" value="9" name="9" onclick="inputValue(this.name, this.value)">9</td>
+            <td><button type="button" class="button_cal" value="*" name="x" onclick="inputValue(this.name, this.value)">x</td>
+        </tr>
+
+        <tr>
+            <td><button type="button" class="button_cal" onclick="clearf()">C</button></td>
+            <td><button type="button" class="button_cal" value="0" name="0" onclick="inputValue(this.name, this.value)">0</button></td>
+            <td><button type="button" class="button_cal" onclick="result()">=</button></td>
+            <td><button type="button" class="button_cal" value="/" name="/" onclick="inputValue(this.name, this.value)">/</button></td>
+        </tr>
+    </table>
+</body>
+</html>
+
+<script>
+    let display = document.getElementById('display')
+    let calc = document.getElementById('calc')
+
+    function inputValue(name, value) {
+        display.value += name
+        calc.value += value
+    }
+    
+    function clearf() {
+        display.value = ''
+        calc.value = ''
+    }
+
+    function result() {
+        let result_cal = eval(calc.value)
+        display.value = result_cal
+    }
+</script>
