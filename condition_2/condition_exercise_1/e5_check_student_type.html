@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student type</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let kt = parseInt(prompt('Nhập điểm kiểm tra:'))
+    let gk = parseInt(prompt('Nhập điểm giữa kỳ:'))
+    let ck = parseInt(prompt('Nhập điểm cuối kỳ:'))
+
+    let average = (kt + gk + ck) / 3
+
+    if(average < 5) {
+        alert('Học sinh trung bình.')
+    }
+    else if(average < 8) {
+        alert('Học sinh tiên tiến.')
+    }
+    else {
+        alert('Học sinh giỏi.')
+    }
+</script>
