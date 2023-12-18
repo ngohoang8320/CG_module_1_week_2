@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="cal()">
+    
+</body>
+</html>
+
+<script>
+    function cal() {
+        let number = parseInt(prompt('Enter the number:'))
+        let sum = 0
+            while (number !== -1) {
+                if(isNaN(number)) {
+                    number = parseInt(prompt('Enter the number:'))
+                    continue
+                }
+                else if(number === -1) {
+                    break
+                }
+                else {
+                    sum += number
+                    number = parseInt(prompt('Enter the number:'))
+                    continue
+                }
+            }
+        document.write(sum)
+    }       
+</script>
