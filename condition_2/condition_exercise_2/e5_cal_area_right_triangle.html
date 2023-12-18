@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Right triangle</title>
+</head>
+<body onload="cal()">
+    
+</body>
+</html>
+
+<script>
+    function cal() {
+        let tri_base = parseInt(prompt("Enter the right triangle's base:"))
+        let tri_height = parseInt(prompt("Enter the right triangle's height:"))
+        if(isNaN(tri_base) || isNaN(tri_height)) {
+            cal()
+        }
+        else {
+            let area = (tri_base * tri_height) / 2
+            alert('The area of this right triangle = ' + area + '.')
+        }
+    }
+</script>

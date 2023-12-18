@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric bill</title>
+</head>
+<body onload="cal()">
+    
+</body>
+</html>
+
+<script>
+    function cal() {
+        let kw = parseInt(prompt('Enter Kwh:'))
+        if(isNaN(kw)) {
+            cal()
+        }
+        else {
+            if(kw <= 10) {
+                let bill = kw * 10
+                alert('You have to pay: $' + bill)
+            }
+
+            else if(kw <= 20) {        
+                let bill = 10 * 10 + (kw - 10) * 8
+                alert('You have to pay: $' + bill)
+            }
+
+            else {
+                let bill = 10 * 10 + 10 * 8 + (kw - 20) * 6
+                alert('You have to pay: $' + bill)
+            }
+        }
+    }
+    
+</script>

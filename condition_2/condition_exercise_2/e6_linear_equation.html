@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear equation</title>
+</head>
+<body onload="fix()">
+    
+</body>
+</html>
+
+<script>
+    function fix() {
+        let a = parseInt(prompt('Enter a base on this form "ax + b = 0":'))
+        let b = parseInt(prompt('Enter b base on this form "ax + b = 0":'))
+        if(isNaN(a) || isNaN(b)) {
+            fix()
+        }
+        else {
+            if(a == 0) {
+                if(b == 0) {
+                    alert('Infinitely many roots.')
+                }
+                else {
+                    alert('The equation has no solution.')
+                }
+            }
+            else {
+                let x = -b/a
+                alert('x = ' + x + '.')
+            }
+        }
+    }
+</script>

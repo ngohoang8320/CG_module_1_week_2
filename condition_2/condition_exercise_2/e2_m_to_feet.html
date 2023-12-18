@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meter to feet</title>
+</head>
+<body onload="convert()">
+    
+</body>
+</html>
+
+<script>
+    function convert() {
+        let m = parseInt(prompt('Enter meter:'))
+        if(!isNaN(m)) {
+            let ft = m * 3.2808
+            alert('= ' + ft + ' feet.')
+        }
+        else {
+            convert()
+        }
+    }
+</script>

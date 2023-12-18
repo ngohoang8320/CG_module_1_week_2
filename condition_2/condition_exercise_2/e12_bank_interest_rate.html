@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank</title>
+</head>
+<body onload="cal()">
+    
+</body>
+</html>
+
+<script>
+    function cal() {
+        let omn = parseInt(prompt('Enter your money:'))
+        let month = parseInt(prompt('Enter month:'))
+
+        if(isNaN(omn) || isNaN(month)) {
+            cal()
+        }
+        else {
+            if(month <= 3) {
+                let rate = 3.2/100
+                let after_money = omn
+                for(i = 1; i <= month; i++) {
+                    after_money = after_money + after_money * rate
+                }
+                alert(after_money)
+            }
+            else {
+                let rate = 5.1/100
+                let after_money =omn
+                for(i = 1; i <= month; i++) {
+                    after_money = after_money + after_money * rate
+                }
+                alert(after_money)
+            }
+        }
+    }
+</script>

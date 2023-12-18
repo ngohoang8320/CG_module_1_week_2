@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle</title>
+</head>
+<body onload="cal()">
+    
+</body>
+</html>
+
+<script>
+    function cal() {
+        let a = parseInt(prompt("Enter the rectangle's width:"))
+        let b = parseInt(prompt("Enter the rectangle's height:"))
+        if(isNaN(a) || isNaN(b)) {
+            cal()
+        }
+        else {
+            let area = a * b
+            alert('The area of this rectangle = ' + area + '.')
+        }
+    }
+</script>

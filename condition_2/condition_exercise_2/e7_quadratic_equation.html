@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadratic equations</title>
+</head>
+<body onload="fix()">
+    
+</body>
+</html>
+
+<script>
+    function fix() {
+        let a = parseInt(prompt('Enter a base on this form "ax^2 + bx +c = 0":'))
+        let b = parseInt(prompt('Enter b base on this form "ax^2 + bx +c = 0":'))
+        let c = parseInt(prompt('Enter c base on this form "ax^2 + bx +c = 0":'))
+        if(isNaN(a) || isNaN(b) || isNaN(c)) {
+            fix()
+        }
+        else {
+            if(a == 0) {
+                alert('This is a linear equation, solve it your self.')
+            }
+            else {
+                let alpha = (b*b) - (4*a*c)
+
+                if(alpha < 0) {
+                    alert('The equation has no solution.')
+                }
+                else if(alpha == 0) {
+                    let x = -b/(2*a)
+                    alert('x = ' + x + '.')
+                }
+                else {
+                    let x1 = (-b - Math.sqrt(alpha)) / (2*a)
+                    let x2 = (-b + Math.sqrt(alpha)) / (2*a)
+                    alert('x1 = ' + x1 + '.\nx2 = ' + x2 + '.')
+                }
+            }
+        }
+    }
+</script>

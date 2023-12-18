@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human's age</title>
+</head>
+<body onload="checkf()">
+    
+</body>
+</html>
+
+<script>
+    function checkf() {
+        let age = parseInt(prompt('Enter the age:'))
+
+        if(isNaN(age)) {
+            checkf()
+        }
+        else {
+            if(age > 0 && age < 120) {
+                alert("This is a human's age.")
+            }
+            else {
+                alert("This is not a human's age.")
+            }
+        }
+    }  
+</script>

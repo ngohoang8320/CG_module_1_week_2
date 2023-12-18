@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax</title>
+</head>
+<body onload="cal()">
+    
+</body>
+</html>
+
+<script>
+    function cal() {
+        let income = parseInt(prompt('Enter your personal income:'))
+
+        if(isNaN(income)) {
+            cal()
+        }
+        else {
+            let tax = income * 0.1
+            alert('Your have to pay: $' + tax + ' for tax.')
+        }
+        
+    }
+</script>
