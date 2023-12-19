@@ -20,14 +20,32 @@
         }
         else {
             if(a < 0 || b < 0 || c < 0) {
-                alert("They can NOT make a triangle.")
+                alert("They can NOT make a triangle.\nKhong phai la tam giac.")
             }
             else {
                 if(a + b > c && b + c > a && a + c > b) {
-                    alert("They can make a triangle.")
+                    if(a==b && b==c && c==a){
+                        alert("They can make an equilateral triangle.\nTam giac deu.")
+                    }
+                    else if(a==b || b==a || c==a){
+                        if((a**2 == b**2 + c**2) || (b**2 == a**2 + c**2) || (c**2 == a**2 + b**2)) {
+                        alert("They can make an isosceles right triangle.\nTam giac vuong can.")
+                        }
+                        else {
+                            alert("They can make a isosceles triangle.\nTam giac can.")
+                        }
+                    }
+                    else {
+                        if((a**2 == b**2 + c**2) || (b**2 == a**2 + c**2) || (c**2 == a**2 + b**2)) {
+                        alert("They can make a right triangle.\nLa mot tam giac vuong.")
+                        }
+                        else {
+                            alert("They can make a normal triangle.\nTam giac thuong.")
+                        }
+                    }                    
                 }
                 else {
-                    alert("They can NOT make a triangle.")
+                    alert("They can NOT make a triangle.\nKhong phai la tam giac.")
                 }
             }
         }
