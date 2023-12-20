@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    while(true) {
+        let age = parseInt(prompt('Nhập tuổi:'))
+        let price = 15000
+
+        if(age < 10) {
+            price = price*1 + ' VND.'
+            alert('Giá vé cho trẻ em là : ' + price)
+        }
+        else if(age < 60) {
+            price = price*2 + ' VND.'
+            alert('Giá vé cho người trưởng thành là : ' + price)
+        }
+        else {
+            price = price*1.5 + ' VND.'
+            alert('Giá vé cho người cao tuổi là : ' + price)
+    }
+}
+
+</script>

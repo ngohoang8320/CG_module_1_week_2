@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let paym = parseInt(prompt('Nhập chi tiêu:'))
+    let perc = 0.1
+
+    if(paym < 50000 && paym > 0) {
+        alert('Bạn nhận được : ' + paym*perc + ' point')
+    }
+    else if(paym < 100000) {
+        alert('Bạn nhận được : ' + paym*perc*2 + ' point')
+    }
+    else {
+        alert('Bạn nhận được : ' + paym*perc*3 + ' point')
+    }
+
+</script>
